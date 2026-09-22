@@ -3,114 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elite Motors | Premium Cars</title>
+
+<title>Texas Auto Hub | Premium Vehicles</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-  background:#080808;
+  background:#0b0f14;
   color:white;
 }
 
 header{
-  background:#111;
+  background:#111820;
   padding:18px 6%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   position:sticky;
   top:0;
-  z-index:100;
-  border-bottom:1px solid #333;
+  z-index:1000;
+  border-bottom:1px solid #27313c;
 }
 
 .logo{
   font-size:25px;
-  font-weight:bold;
+  font-weight:900;
+  color:#f5b400;
 }
 
 .logo span{
-  color:#d4af37;
+  color:white;
 }
 
 nav a{
   color:white;
   text-decoration:none;
   margin-left:20px;
+  font-weight:bold;
 }
 
 .hero{
-  min-height:75vh;
-  padding:100px 6%;
+  min-height:520px;
+  padding:100px 7%;
   display:flex;
   align-items:center;
   background:
-  linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.35)),
-  url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80")
+  linear-gradient(90deg,rgba(5,8,12,.95),rgba(5,8,12,.45)),
+  url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=80")
   center/cover;
 }
 
 .hero h1{
   font-size:55px;
-  max-width:650px;
+  max-width:700px;
   margin-bottom:20px;
 }
 
+.hero h1 span{
+  color:#f5b400;
+}
+
 .hero p{
-  font-size:18px;
-  color:#ccc;
-  max-width:550px;
+  font-size:19px;
+  color:#d1d5db;
+  max-width:600px;
   line-height:1.6;
+  margin-bottom:30px;
 }
 
 .btn{
   display:inline-block;
-  margin-top:25px;
   padding:14px 25px;
-  background:#d4af37;
-  color:#000;
+  background:#f5b400;
+  color:#111;
+  border-radius:7px;
   text-decoration:none;
   font-weight:bold;
-  border-radius:5px;
+  margin-right:10px;
 }
 
-.section{
-  padding:60px 6%;
+.btn.dark{
+  background:#202832;
+  color:white;
 }
 
-.section h2{
+section{
+  padding:70px 6%;
+}
+
+.section-title{
   text-align:center;
-  font-size:35px;
   margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:38px;
+}
+
+.section-title p{
+  color:#9ca3af;
+  margin-top:10px;
+}
+
+.filters{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:35px;
+  justify-content:center;
+}
+
+.filters input,
+.filters select{
+  background:#151d26;
+  border:1px solid #303b47;
+  color:white;
+  padding:13px;
+  border-radius:6px;
+  min-width:180px;
 }
 
 .cars{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
   gap:25px;
 }
 
 .car{
-  background:#151515;
+  background:#121a23;
+  border:1px solid #26313c;
   border-radius:12px;
   overflow:hidden;
-  border:1px solid #292929;
   transition:.3s;
 }
 
 .car:hover{
-  transform:translateY(-7px);
+  transform:translateY(-6px);
+  border-color:#f5b400;
 }
 
 .car img{
   width:100%;
-  height:200px;
+  height:210px;
   object-fit:cover;
 }
 
@@ -119,28 +159,107 @@ nav a{
 }
 
 .car-info h3{
-  font-size:22px;
-  margin-bottom:10px;
-}
-
-.price{
-  color:#d4af37;
-  font-size:20px;
-  font-weight:bold;
-  margin:10px 0;
+  font-size:21px;
+  margin-bottom:8px;
 }
 
 .details{
-  color:#aaa;
-  line-height:1.7;
+  color:#9ca3af;
+  font-size:14px;
+  margin:7px 0;
+}
+
+.price{
+  color:#f5b400;
+  font-size:23px;
+  font-weight:bold;
+  margin:15px 0;
+}
+
+.car button{
+  width:100%;
+  padding:12px;
+  border:0;
+  border-radius:6px;
+  background:#f5b400;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.about{
+  background:#111820;
+}
+
+.about-box{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.about-box p{
+  color:#c5cbd2;
+  line-height:1.8;
+  font-size:17px;
+}
+
+.contact{
+  text-align:center;
+}
+
+.contact-box{
+  background:#151d26;
+  max-width:700px;
+  margin:auto;
+  padding:40px;
+  border-radius:12px;
+}
+
+.contact-box h2{
+  margin-bottom:15px;
+}
+
+.contact-box p{
+  color:#bbb;
+  margin:10px;
 }
 
 footer{
-  background:#111;
-  padding:35px 6%;
+  background:#070a0e;
   text-align:center;
-  color:#999;
-  margin-top:40px;
+  padding:30px;
+  color:#777;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  z-index:2000;
+  padding:30px;
+  overflow:auto;
+}
+
+.modal-box{
+  background:#121a23;
+  max-width:850px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:12px;
+}
+
+.modal-box img{
+  width:100%;
+  max-height:450px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.close{
+  float:right;
+  font-size:30px;
+  cursor:pointer;
+  color:#f5b400;
 }
 
 @media(max-width:700px){
@@ -151,6 +270,10 @@ footer{
   nav{
     display:none;
   }
+
+  section{
+    padding:50px 5%;
+  }
 }
 </style>
 </head>
@@ -158,7 +281,7 @@ footer{
 <body>
 
 <header>
-  <div class="logo">ELITE<span>MOTORS</span></div>
+  <div class="logo">TEXAS <span>AUTO HUB</span></div>
 
   <nav>
     <a href="#home">Home</a>
@@ -170,101 +293,349 @@ footer{
 
 <section class="hero" id="home">
   <div>
-    <h1>Find Your Dream Car.</h1>
+    <h1>Find Your <span>Dream Car</span></h1>
 
     <p>
-      Discover premium vehicles carefully selected for style,
-      performance, comfort and reliability.
+      Welcome to Texas Auto Hub. Explore quality vehicles,
+      compare prices and find the right car for your lifestyle.
     </p>
 
     <a href="#cars" class="btn">Browse Cars</a>
+    <a href="#contact" class="btn dark">Contact Us</a>
   </div>
 </section>
 
-<section class="section" id="cars">
+<section id="cars">
 
-<h2>Featured Vehicles</h2>
+  <div class="section-title">
+    <h2>Our Vehicles</h2>
+    <p>Quality vehicles at competitive prices.</p>
+  </div>
 
-<div class="cars">
+  <div class="filters">
 
-<div class="car">
-<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=80">
-<div class="car-info">
-<h3>BMW M4 Competition</h3>
-<p class="details">
-2024 • Automatic • Petrol • 3.0L Turbo
-</p>
-<p class="price">45,000,000 FCFA</p>
-<a class="btn" href="#">View Details</a>
-</div>
-</div>
+    <input
+      type="text"
+      id="search"
+      placeholder="Search cars..."
+      onkeyup="filterCars()"
+    >
 
-<div class="car">
-<img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=80">
-<div class="car-info">
-<h3>Mercedes-Benz AMG GT</h3>
-<p class="details">
-2024 • Automatic • Petrol • V8
-</p>
-<p class="price">62,000,000 FCFA</p>
-<a class="btn" href="#">View Details</a>
-</div>
-</div>
+    <select id="brand" onchange="filterCars()">
+      <option value="all">All Brands</option>
+      <option>BMW</option>
+      <option>Mercedes-Benz</option>
+      <option>Toyota</option>
+      <option>Lexus</option>
+      <option>Audi</option>
+      <option>Porsche</option>
+      <option>Ford</option>
+      <option>Range Rover</option>
+      <option>Lamborghini</option>
+      <option>Rolls-Royce</option>
+    </select>
 
-<div class="car">
-<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80">
-<div class="car-info">
-<h3>Range Rover Sport</h3>
-<p class="details">
-2024 • Automatic • AWD • Luxury SUV
-</p>
-<p class="price">58,000,000 FCFA</p>
-<a class="btn" href="#">View Details</a>
-</div>
-</div>
+    <select id="sort" onchange="sortCars()">
+      <option value="default">Sort By</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
 
-<div class="car">
-<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80">
-<div class="car-info">
-<h3>Porsche 911 Carrera</h3>
-<p class="details">
-2024 • Automatic • Petrol • 3.0L
-</p>
-<p class="price">55,000,000 FCFA</p>
-<a class="btn" href="#">View Details</a>
-</div>
-</div>
+  </div>
 
-</div>
-</section>
-
-<section class="section" id="about">
-
-<h2>About Elite Motors</h2>
-
-<p style="max-width:800px;margin:auto;text-align:center;line-height:1.8;color:#bbb;">
-Elite Motors connects customers with premium vehicles.
-Our collection includes luxury cars, SUVs, sports cars and
-reliable everyday vehicles.
-</p>
+  <div class="cars" id="carList"></div>
 
 </section>
 
-<section class="section" id="contact">
+<section class="about" id="about">
 
-<h2>Contact Us</h2>
+  <div class="about-box">
 
-<p style="text-align:center;color:#bbb;">
-WhatsApp: +237 XXX XXX XXX
-<br>
-Buea, Cameroon
-</p>
+    <div class="section-title">
+      <h2>About Texas Auto Hub</h2>
+    </div>
+
+    <p>
+      Texas Auto Hub is a modern vehicle marketplace focused on
+      helping customers discover quality cars. Browse our inventory,
+      check vehicle details and contact us directly for more information.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <div class="section-title">
+    <h2>Contact Texas Auto Hub</h2>
+    <p>Ready to find your next vehicle?</p>
+  </div>
+
+  <div class="contact-box">
+
+    <h2>Let's Talk</h2>
+
+    <p>📞 Phone: +237 000 000 000</p>
+
+    <p>📱 WhatsApp: +237 000 000 000</p>
+
+    <p>📧 Email: texasautohub@example.com</p>
+
+    <br>
+
+    <a
+      class="btn"
+      href="https://wa.me/237000000000"
+      target="_blank">
+      WhatsApp Us
+    </a>
+
+  </div>
 
 </section>
 
 <footer>
-© 2026 Elite Motors. All Rights Reserved.
+  © 2026 Texas Auto Hub. All Rights Reserved.
 </footer>
+
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <span class="close" onclick="closeModal()">×</span>
+
+    <img id="modalImg">
+
+    <h2 id="modalTitle"></h2>
+
+    <p id="modalDetails"></p>
+
+    <div class="price" id="modalPrice"></div>
+
+    <a
+      class="btn"
+      href="https://wa.me/237000000000"
+      target="_blank">
+      Ask About This Car
+    </a>
+
+  </div>
+
+</div>
+
+<script>
+
+const cars = [
+
+{
+name:"BMW 7 Series",
+brand:"BMW",
+year:2023,
+mileage:"18,500 km",
+price:48000000,
+image:"https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Mercedes-Benz S-Class",
+brand:"Mercedes-Benz",
+year:2023,
+mileage:"15,200 km",
+price:62000000,
+image:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Toyota Land Cruiser",
+brand:"Toyota",
+year:2022,
+mileage:"32,000 km",
+price:42000000,
+image:"https://images.unsplash.com/photo-1594502184342-2e12f877aa73?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Lexus LX 600",
+brand:"Lexus",
+year:2023,
+mileage:"21,000 km",
+price:55000000,
+image:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Audi Q8",
+brand:"Audi",
+year:2023,
+mileage:"20,500 km",
+price:43000000,
+image:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Porsche Cayenne",
+brand:"Porsche",
+year:2022,
+mileage:"17,800 km",
+price:50000000,
+image:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Ford Mustang",
+brand:"Ford",
+year:2023,
+mileage:"12,400 km",
+price:28000000,
+image:"https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Range Rover Sport",
+brand:"Range Rover",
+year:2023,
+mileage:"16,000 km",
+price:58000000,
+image:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Lamborghini Urus",
+brand:"Lamborghini",
+year:2022,
+mileage:"9,800 km",
+price:95000000,
+image:"https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=900&q=80"
+},
+
+{
+name:"Rolls-Royce Cullinan",
+brand:"Rolls-Royce",
+year:2023,
+mileage:"7,500 km",
+price:145000000,
+image:"https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=900&q=80"
+}
+
+];
+
+let displayedCars=[...cars];
+
+function displayCars(){
+
+const list=document.getElementById("carList");
+
+list.innerHTML="";
+
+displayedCars.forEach((car,index)=>{
+
+list.innerHTML+=`
+
+<div class="car">
+
+<img src="${car.image}" alt="${car.name}">
+
+<div class="car-info">
+
+<h3>${car.name}</h3>
+
+<div class="details">
+${car.year} • ${car.mileage}
+</div>
+
+<div class="price">
+₣${car.price.toLocaleString()}
+</div>
+
+<button onclick="openModal(${index})">
+View Details
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+function filterCars(){
+
+const search=
+document.getElementById("search").value.toLowerCase();
+
+const brand=
+document.getElementById("brand").value;
+
+displayedCars=cars.filter(car=>{
+
+const matchesSearch=
+car.name.toLowerCase().includes(search) ||
+car.brand.toLowerCase().includes(search);
+
+const matchesBrand=
+brand==="all" || car.brand===brand;
+
+return matchesSearch && matchesBrand;
+
+});
+
+displayCars();
+
+}
+
+function sortCars(){
+
+const sort=
+document.getElementById("sort").value;
+
+if(sort==="low"){
+
+displayedCars.sort((a,b)=>a.price-b.price);
+
+}
+
+if(sort==="high"){
+
+displayedCars.sort((a,b)=>b.price-a.price);
+
+}
+
+displayCars();
+
+}
+
+function openModal(index){
+
+const car=displayedCars[index];
+
+document.getElementById("modalImg").src=car.image;
+
+document.getElementById("modalTitle").innerText=
+car.name;
+
+document.getElementById("modalDetails").innerText=
+`${car.brand} • ${car.year} • ${car.mileage}`;
+
+document.getElementById("modalPrice").innerText=
+"₣"+car.price.toLocaleString();
+
+document.getElementById("modal").style.display="block";
+
+}
+
+function closeModal(){
+
+document.getElementById("modal").style.display="none";
+
+}
+
+displayCars();
+
+</script>
 
 </body>
 </html>
